@@ -33,7 +33,7 @@ Modelo:
 Los modelos YOLO de detección de objetos normalmente producen bounding boxes alrededor del **cuerpo/persona completa**:
 
 <p align="center">
-  <img src="img/yolo26s-detection.png" width="400">
+  <img src="img/body.png" width="400">
 </p>
 
 
