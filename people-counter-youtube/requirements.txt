@@ -1,5 +1,0 @@
-yt-dlp
-ultralytics
-opencv-python
-huggingface_hub
-sahi
