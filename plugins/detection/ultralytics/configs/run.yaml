@@ -1,0 +1,16 @@
+edition: ultralytics
+license: free
+
+# infer = object detector (YOLO boxes). Standalone (--source) uses run.model.
+#         With --ipc, boxes come from topic 02 InferSlot; model/device are ignored.
+run:
+  ipc: null
+  source: null
+  model: models/detection/yolo26s.pt
+  confidence: 0.35
+  imgsz: 640                 # Ultralytics/letterbox; bake same value into ONNX/engine export
+  classes: null                 # null = all classes; or [person] / [0]
+  # names: [Fire, Smoke]        # ORT edition: ordered id→label (standalone)
+  imshow: false
+  imshow_scale: 1.0          # preview only (1.0 | 0.5 | …); not used for infer
+  device: cpu                 # infer device: cpu | 0 | 1 | … (GPU index)

@@ -1,0 +1,16 @@
+edition: ort
+license: paid
+
+# infer = ONNX Runtime detector. Standalone only (--source + .onnx).
+#         With --ipc, boxes come from topic 02; model/device here are ignored.
+run:
+  ipc: null
+  source: null
+  model: models/detection/yolo26s.onnx
+  confidence: 0.35
+  imgsz: 640
+  classes: null
+  # names: [Fire, Smoke]        # required for custom non-COCO labels (standalone)
+  imshow: false
+  imshow_scale: 1.0
+  device: cpu                 # needs onnxruntime-gpu for CUDA

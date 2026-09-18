@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "computer-vis"
+version = "0.1.0"
+description = "computer-vis packaged plugin: detection"
+readme = "PACKAGED.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "opencv-python>=4.8",
+    "Pillow>=10.0",
+    "PyYAML>=6.0",
+    "lap>=0.4",
+    "scipy>=1.10",
+    "torch==2.12.1",
+    "torchvision==0.27.1",
+    "ultralytics>=8.2",
+    "onnxruntime-gpu>=1.17; sys_platform == 'linux'",
+    "onnxruntime>=1.17; sys_platform == 'win32'",
+    "onnxruntime>=1.17; sys_platform == 'darwin'"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools]
+packages = [
+    "common",
+    "common.media"
+]
+
+[tool.setuptools.package-dir]
+"common" = "common"
+"common.media" = "common/media"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-v --tb=short --import-mode=importlib"

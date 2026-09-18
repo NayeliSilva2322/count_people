@@ -1,0 +1,15 @@
+edition: tensorrt
+license: paid
+
+# infer = TensorRT .engine detector. Standalone only (--source).
+#         With --ipc, boxes come from topic 02; model/device here are ignored.
+run:
+  ipc: null
+  source: null
+  model: models/detection/yolo26s.engine
+  confidence: 0.35
+  imgsz: 640
+  classes: null
+  imshow: false
+  imshow_scale: 1.0
+  device: "0"                 # TensorRT expects a CUDA device
