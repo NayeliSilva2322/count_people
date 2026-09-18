@@ -33,14 +33,14 @@ Modelo:
 Los modelos YOLO de detección de objetos normalmente producen bounding boxes alrededor del **cuerpo/persona completa**:
 
 <p align="center">
-  <img src="img/yolo26s-detection.png" width="800">
+  <img src="img/yolo26s-detection.png" width="400">
 </p>
 
 
 El modelo de crowd counting produce bounding boxes alrededor de la **cabeza**:
 
 <p align="center">
-  <img src="img/irail-1-head-detection.png" width="800">
+  <img src="img/irail-1-head-detection.png" width="400">
 </p>
 
 Esto permite utilizar estrategias diferentes dependiendo del escenario:
