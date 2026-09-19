@@ -3,9 +3,9 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "computer-vis"
+name = "count_people"
 version = "0.1.0"
-description = "computer-vis packaged plugin: detection"
+description = "count_people packaged plugin: detection"
 readme = "PACKAGED.md"
 requires-python = ">=3.10"
 dependencies = [
